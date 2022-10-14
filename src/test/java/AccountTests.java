@@ -6,6 +6,7 @@ import main.java.Account;
 
 public class AccountTests {
     Account testAccount = new Account(12345,54321,100,1000);
+
     @Test
     public void testPINTrue() {
         boolean testResult = testAccount.validatePIN(54321);
@@ -27,6 +28,15 @@ public class AccountTests {
         Account newAccount = new Account(12345, 54321, 1000, 12000);
         double correctAmount = 1000;
         double result = newAccount.getAvailableBalance();
+
+        assertEquals(correctAmount, result, 0);
+    }
+
+    @Test
+    public void testGetTotalBalance() {
+
+        double correctAmount = 1000;
+        double result = testAccount.getTotalBalance();
 
         assertEquals(correctAmount, result, 0);
     }
