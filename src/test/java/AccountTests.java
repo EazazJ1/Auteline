@@ -1,4 +1,4 @@
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 import org.junit.*;
 
@@ -11,6 +11,13 @@ public class AccountTests {
         boolean testResult = testAccount.validatePIN(54321);
 
         assertTrue(testResult);
+
+    }
+    @Test
+    public void testPINFalse() {
+        boolean testResult = testAccount.validatePIN(5432);
+
+        assertFalse(testResult);
 
     }
 }
