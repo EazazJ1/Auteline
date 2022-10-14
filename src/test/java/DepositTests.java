@@ -34,5 +34,19 @@ public class DepositTests {
 
         assertTrue(res);
     }
+    @Test
+    public void checkGreaterAgain(){
+        boolean res = false;
+        int one = 20;
+        int two = 12;
+
+
+        if(one > two){
+            res = true;
+        }
+
+        assertTrue(res);
+    }
+
 
 }
