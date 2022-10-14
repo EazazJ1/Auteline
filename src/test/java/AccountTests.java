@@ -20,4 +20,14 @@ public class AccountTests {
         assertFalse(testResult);
 
     }
+    @Test
+    public void testGetAvailableBalance() {
+
+
+        Account newAccount = new Account(12345, 54321, 1000, 12000);
+        double correctAmount = 1000;
+        double result = newAccount.getAvailableBalance();
+
+        assertEquals(correctAmount, result, 0);
+    }
 }
