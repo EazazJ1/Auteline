@@ -30,4 +30,13 @@ public class AccountTests {
 
         assertEquals(correctAmount, result, 0);
     }
+
+    @Test
+    public void testGetTotalBalance() {
+        
+        double correctAmount = 1000;
+        double result = testAccount.getTotalBalance();
+
+        assertEquals(correctAmount, result, 0);
+    }
 }
