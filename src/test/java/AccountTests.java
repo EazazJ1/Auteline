@@ -33,7 +33,7 @@ public class AccountTests {
 
     @Test
     public void testGetTotalBalance() {
-        
+
         double correctAmount = 1000;
         double result = testAccount.getTotalBalance();
 
