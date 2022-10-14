@@ -24,8 +24,8 @@ public class DepositTests {
     @Test
     public void checkGreater(){
         boolean res = false;
-        int one = 2;
-        int two = 1;
+        int one = 1;
+        int two = 2;
 
 
         if(one > two){
