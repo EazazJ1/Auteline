@@ -30,6 +30,12 @@
             <artifactId>org.apache.derby</artifactId>
             <version>10.11.1.1_v201605202053</version>
         </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
+        </dependency>     
     </dependencies>
 
     <build>
