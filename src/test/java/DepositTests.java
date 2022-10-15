@@ -4,7 +4,7 @@ import org.junit.*;
 
 //import main.java.Deposit;
 //import main.java.Screen;
-import main.java.*;
+import main.java.Deposit;
 
 public class DepositTests {
 
