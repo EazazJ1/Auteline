@@ -1,4 +1,5 @@
 import main.java.Account;
+import main.java.BankDatabase;
 //import.main.*;
 
 import static org.junit.Assert.*;
@@ -21,6 +22,13 @@ public class AcceptanceTest {
                 54321,
                 1000,
                 1200);
+        BankDatabase testDatabase = new BankDatabase();
+
+        //sign in with correct account number and pin
+
+        testDatabase.authenticateUser(12345, 54321);
+        boolean authenticated = testDatabase.authenticateUser(12345, 54321);
+
 
         testAccount.debit(100);
         double finalAvailableBalance = testAccount.getAvailableBalance();
@@ -33,8 +41,8 @@ public class AcceptanceTest {
 
         //total balance was $1100 from withdraw, then deposited $200 so should now be $1300
 
+        assertTrue(authenticated);
         assertEquals(900, finalAvailableBalance, 0);
         assertEquals(1300, finalTotalBalance, 0);
-
     }
 }
