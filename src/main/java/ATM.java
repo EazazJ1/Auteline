@@ -105,10 +105,6 @@ public class ATM {
     screen.displayMessageLine("2 - Withdraw cash");
     screen.displayMessageLine("3 - Deposit funds");
     screen.displayMessageLine("4 - Exit\n");
-    screen.displayMessageLine("5 - Navdeep's favorite lunch: spaghetti");
-    screen.displayMessageLine("6 - Eazaz's favorite lunch: Sushi");
-    screen.displayMessageLine("7 - Rachel's favorite lunch: Pho");
-    screen.displayMessageLine("8 - Anthony's favorite lunch: Farfalle al pesto");
     screen.displayMessage("[?] Enter a choice: ");
     return keypad.getInput(); // return user's selection
   }
