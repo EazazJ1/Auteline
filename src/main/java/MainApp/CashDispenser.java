@@ -7,7 +7,7 @@
 // CashDispenser.java
 // Represents the cash dispenser of the ATM
 
-package main.java;
+package MainApp;
 
 public class CashDispenser {
 

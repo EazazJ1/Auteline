@@ -7,7 +7,7 @@
 // Screen.java
 // Represents the screen of the ATM
 
-package main.java;
+package MainApp;
 
 public class Screen {
 
