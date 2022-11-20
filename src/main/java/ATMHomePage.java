@@ -11,8 +11,13 @@ public class ATMHomePage extends main.java.BankDatabase {
     private JLabel userNumberLabel;
     private JLabel pinLabel;
 
-
+    private JFrame frame;
     public ATMHomePage() {
+        frame = new JFrame("ATMHomePage");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+        frame.add(mainPanel);
+        frame.pack();
         loginButton.addActionListener(new LogInBtnClicked());
 }
 
@@ -31,17 +36,20 @@ public class ATMHomePage extends main.java.BankDatabase {
                 else{
                     System.out.println("Login Successfully");
                     //navigate to next page
+                    mainPanel.setVisible(false);
+//                    frame.setContentPane(new MainMenuPage().mainMenuPanel);
+//                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//                    frame.pack();
+//                    frame.setVisible(true);
+                    frame.setVisible(false);
+                    new MainMenuPage();
                 }
             }
         }
     }
     public static void main(String[] args) {
-        JFrame frame = new JFrame("ATMHomePage");
-        frame.setContentPane(new ATMHomePage().mainPanel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
-      //new ATMHomePage();
+    new ATMHomePage();
+
     }
 
 }
