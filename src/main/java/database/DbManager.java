@@ -5,7 +5,7 @@ import java.sql.*;
 public class DbManager {
 
     private static Connection dbConnection = null;
-    private static final String dbName = "test";
+    private static final String dbName = "auteline";
 
     /**
      * This method starts embedded Derby engine and creates a connection. Consequent calls to this
