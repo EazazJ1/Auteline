@@ -30,7 +30,7 @@ public class DepositPage extends main.java.BankDatabase {
             int depositAmount = Integer.parseInt(depositAmountInput.getText());
             if(depositAmount>0) {
                 double availableBalance = bankDatabase.getAvailableBalance(Integer.parseInt(userNumber));
-                    bankDatabase.credit(Integer.parseInt(userNumber), depositAmount);
+                    bankDatabase.credit(Integer.parseInt(userNumber), depositAmount / 100);
                     JOptionPane.showMessageDialog(null, "Deposit Successful!");
             }else{
                 JOptionPane.showMessageDialog(null, "Deposit a mount must greater than $0");
