@@ -7,7 +7,7 @@
 // ATMTest.java
 // Driver program to test ATM program
 
-package main.java;
+package MainApp;
 
 public class ATMTest {
 

@@ -1,11 +1,6 @@
 import org.junit.*;
-import main.java.Screen;
+import MainApp.Screen;
 import org.junit.contrib.java.lang.system.SystemOutRule;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 
 public class ScreenTests {
 @Rule

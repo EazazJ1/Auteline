@@ -1,13 +1,10 @@
 import org.junit.Test;
-import main.java.Account;
-import main.java.BankDatabase;
-import main.java.CashDispenser;
+import MainApp.Account;
+import MainApp.BankDatabase;
 
 //import.main.*;
 
 import static org.junit.Assert.*;
-
-import org.junit.*;
 
 //import main.java.Account.debit;
 import static org.junit.Assert.assertTrue;

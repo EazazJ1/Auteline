@@ -7,7 +7,7 @@
 // Account.java
 // Represents a bank account
 
-package main.java;
+package MainApp;
 
 public class Account {
 

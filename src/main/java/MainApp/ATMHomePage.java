@@ -1,8 +1,10 @@
+package MainApp;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ATMHomePage extends main.java.BankDatabase {
+public class ATMHomePage extends BankDatabase {
     private JButton loginButton;
     private JPasswordField pinInput;
     private JTextField userNumberInput;

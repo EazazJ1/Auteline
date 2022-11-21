@@ -1,4 +1,5 @@
-import main.java.BankDatabase;
+package MainApp;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,7 +10,7 @@ public class EARNAppGui {
     //variables and functions for internal use
     private final BankDatabase atmDatabase = new BankDatabase();
 
-    private final main.java.CashDispenser atmDispenser = new main.java.CashDispenser();
+    private final CashDispenser atmDispenser = new CashDispenser();
     private int currUser = 0;
 
     private boolean withdrawCash(int withdrawValue){
