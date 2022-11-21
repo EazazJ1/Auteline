@@ -85,30 +85,47 @@ public class BankDatabase {
   }
 
   // credit an amount to Account with specified account number
-  public void credit(int userAccountNumber, double amount)  {
+//  public void credit(int userAccountNumber, double amount)  {
+//    getAccount(userAccountNumber).credit(amount);
+//  }
+
+  public void credit(int userAccountNumber, double amount){
+    String query = "update clients set AvailableBalance = AvailableBalance + ?, TotalBalance = TotalBalance + ? where AccountNumber = ?";
+
+    try {
+      PreparedStatement stmt = this.con.prepareStatement(query);
+      stmt.setDouble(1, amount);
+      stmt.setDouble(2, amount);
+      stmt.setInt(3, userAccountNumber);
+      boolean rs = stmt.execute();
+
+    } catch (SQLException e) {
+      throw new RuntimeException(e);
+    }
+
     getAccount(userAccountNumber).credit(amount);
   }
 
-//  public void credit(int userAccountNumber, double amount){
-//    String query = "select * from clients where AccountNumber = ?";
-//
-//    PreparedStatement stmt = null;
-//    try {
-//      stmt = this.con.prepareStatement(query);
-//      stmt.setInt(1, userAccountNumber);
-//      ResultSet rs = stmt.executeQuery();
-//      if(rs.next()){
-//        Account newAcc = new Account(rs.getInt(1),rs.getInt(2),  rs.getDouble(3),  rs.getDouble(4));
-//
-//      }
-//
-//    } catch (SQLException e) {
-//      throw new RuntimeException(e);
-//    }
+  // debit an amount from of Account with specified account number
+//  public void debit(int userAccountNumber, double amount)  {
+//    getAccount(userAccountNumber).debit(amount);
 //  }
 
-  // debit an amount from of Account with specified account number
-  public void debit(int userAccountNumber, double amount)  {
+    public void debit(int userAccountNumber, double amount)  {
+
+      String query = "update clients set AvailableBalance = AvailableBalance - ?, TotalBalance = TotalBalance - ? where AccountNumber = ?";
+
+      try {
+        PreparedStatement stmt = this.con.prepareStatement(query);
+        stmt.setDouble(1, amount);
+        stmt.setDouble(2, amount);
+        stmt.setInt(3, userAccountNumber);
+        boolean rs = stmt.execute();
+
+      } catch (SQLException e) {
+        throw new RuntimeException(e);
+      }
+
     getAccount(userAccountNumber).debit(amount);
   }
 
