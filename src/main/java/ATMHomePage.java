@@ -10,6 +10,7 @@ public class ATMHomePage extends main.java.BankDatabase {
     private JPanel mainPanel;
     private JLabel userNumberLabel;
     private JLabel pinLabel;
+    private main.java.BankDatabase bankDatabase = new main.java.BankDatabase();
 
     private JFrame frame;
     public ATMHomePage() {
@@ -18,6 +19,7 @@ public class ATMHomePage extends main.java.BankDatabase {
         frame.setVisible(true);
         frame.add(mainPanel);
         frame.pack();
+
         loginButton.addActionListener(new LogInBtnClicked());
 }
 
@@ -28,7 +30,7 @@ public class ATMHomePage extends main.java.BankDatabase {
             //check if user had enter data
             if(!userNumberInput.getText().isEmpty() && !pinInput.getText().isEmpty()) {
                //validate user input
-                boolean accountValidation = authenticateUser(Integer.parseInt(userNumberInput.getText()), Integer.parseInt(pinInput.getText()));
+                boolean accountValidation = bankDatabase.authenticateUser(Integer.parseInt(userNumberInput.getText()), Integer.parseInt(pinInput.getText()));
                 if (accountValidation == false) {
                     System.out.println("Invalid Input");
                     JOptionPane.showMessageDialog(null, "Incorrect user number or PIN");
@@ -36,13 +38,12 @@ public class ATMHomePage extends main.java.BankDatabase {
                 else{
                     System.out.println("Login Successfully");
                     //navigate to next page
-                    mainPanel.setVisible(false);
-//                    frame.setContentPane(new MainMenuPage().mainMenuPanel);
-//                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//                    frame.pack();
-//                    frame.setVisible(true);
-                    frame.setVisible(false);
-                    new MainMenuPage();
+                    String userNumber = userNumberInput.getText();
+                    userNumberInput.setText("");
+                    pinInput.setText("");
+                    //mainPanel.setVisible(false);
+                    frame.dispose();
+                    new MainMenuPage(bankDatabase,userNumber);
                 }
             }
         }
