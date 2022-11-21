@@ -7,7 +7,7 @@
 // BalanceInquiry.java
 // Represents a balance inquiry ATM transaction
 
-package main.java;
+package MainApp;
 
 public class BalanceInquiry extends Transaction {
 

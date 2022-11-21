@@ -7,7 +7,7 @@
 // Withdrawal.java
 // Represents a withdrawal ATM transaction
 
-package main.java;
+package MainApp;
 
 public class Withdrawal extends Transaction {
 

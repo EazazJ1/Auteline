@@ -1,8 +1,10 @@
+package MainApp;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class DepositPage extends main.java.BankDatabase {
+public class DepositPage extends BankDatabase {
     private JTextField depositAmountInput;
     private JLabel depositLabel;
     private JPanel depositPanel;
@@ -10,8 +12,8 @@ public class DepositPage extends main.java.BankDatabase {
     private JButton makeDepositButton;
     private String userNumber;
     private JFrame frame;
-    private main.java.BankDatabase bankDatabase;
-    public DepositPage(main.java.BankDatabase bankDatabase, String userNumber){
+    private BankDatabase bankDatabase;
+    public DepositPage(BankDatabase bankDatabase, String userNumber){
         frame = new JFrame("DepositPage");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);

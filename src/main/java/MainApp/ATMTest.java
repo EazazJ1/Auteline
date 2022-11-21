@@ -7,15 +7,15 @@
 // ATMTest.java
 // Driver program to test ATM program
 
-package main.java;
+package MainApp;
 
 public class ATMTest {
 
-  // main method creates and runs the ATM
-  //public static void main(String[] args) {
+   //main method creates and runs the ATM
+//  public static void main(String[] args) {
 //    ATM mobileATM = new ATM();
 //    mobileATM.run();
-
- // }
+//
+//  }
 
 }

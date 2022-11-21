@@ -2,7 +2,7 @@ import static org.junit.Assert.*;
 
 import org.junit.*;
 
-import main.java.Account;
+import MainApp.Account;
 
 public class AccountTests {
     Account testAccount = new Account(12345,54321,100,1000);

@@ -7,7 +7,7 @@
 // Keypad.java
 // Represents the keypad of the ATM
 
-package main.java;
+package MainApp;
 
 import java.util.Scanner;
 

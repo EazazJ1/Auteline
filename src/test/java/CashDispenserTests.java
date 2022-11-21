@@ -2,7 +2,7 @@ import static org.junit.Assert.*;
 
 import org.junit.*;
 
-import main.java.CashDispenser;
+import MainApp.CashDispenser;
 
 public class CashDispenserTests {
     @Test

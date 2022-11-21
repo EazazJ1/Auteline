@@ -1,4 +1,4 @@
-import main.java.Account;
+package MainApp;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -12,9 +12,9 @@ public class MainMenuPage  {
     private JLabel mainMenuLable;
     public JPanel mainMenuPanel;
     private JFrame frame;
-    private main.java.BankDatabase bankDatabase;
+    private BankDatabase bankDatabase;
     private String userNumber;
-    public MainMenuPage(main.java.BankDatabase database, String userNumber) {
+    public MainMenuPage(BankDatabase database, String userNumber) {
         frame = new JFrame("MainMenuPage");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);

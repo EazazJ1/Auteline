@@ -1,3 +1,5 @@
+package MainApp;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -13,8 +15,8 @@ public class WithdrawPage {
     private JButton backButton;
     private JFrame frame;
     private String userNumber;
-    private main.java.BankDatabase bankDatabase;
-    public WithdrawPage(main.java.BankDatabase bankDatabasePassed, String userNumber){
+    private BankDatabase bankDatabase;
+    public WithdrawPage(BankDatabase bankDatabasePassed, String userNumber){
         frame = new JFrame("WithdrawPage");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);

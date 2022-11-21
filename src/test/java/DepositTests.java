@@ -1,15 +1,3 @@
-import static org.junit.Assert.*;
-
-import org.junit.*;
-
-
-import main.java.BankDatabase;
-import main.java.Screen;
-import main.java.Deposit;
-import main.java.Keypad;
-import main.java.DepositSlot;
-
-
 public class DepositTests {
 
 //    @Test

@@ -1,4 +1,4 @@
-package main.java;
+package MainApp;
 
 /**
  * SMTI06, 54411850, M Haidar Hanif Task Five: Automated Teller Machine Auteline | Simple ATM

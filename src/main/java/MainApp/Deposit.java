@@ -7,7 +7,7 @@
 // Deposit.java
 // Represents a deposit ATM transaction
 
-package main.java;
+package MainApp;
 
 public class Deposit extends Transaction {
 
