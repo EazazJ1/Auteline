@@ -90,13 +90,12 @@ public class BankDatabase {
 //  }
 
   public void credit(int userAccountNumber, double amount){
-    String query = "update clients set AvailableBalance = AvailableBalance + ?, TotalBalance = TotalBalance + ? where AccountNumber = ?";
+    String query = "update clients set TotalBalance = TotalBalance + ? where AccountNumber = ?";
 
     try {
       PreparedStatement stmt = this.con.prepareStatement(query);
       stmt.setDouble(1, amount);
-      stmt.setDouble(2, amount);
-      stmt.setInt(3, userAccountNumber);
+      stmt.setInt(2, userAccountNumber);
       boolean rs = stmt.execute();
 
     } catch (SQLException e) {
