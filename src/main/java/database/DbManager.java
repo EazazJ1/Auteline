@@ -21,7 +21,7 @@ public class DbManager {
             // start Embedded Derby engine
             Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
             // create a connection
-            dbConnection = DriverManager.getConnection("jdbc:mysql://172.105.99.6:3306/" + dbName, "root", "rootpassword");
+            dbConnection = DriverManager.getConnection("jdbc:mysql://139.177.196.76:3306/" + dbName, "root", "CSCN73010-F22-root");
 
 
         } catch (SQLException | ClassNotFoundException | InstantiationException | IllegalAccessException ex) {
