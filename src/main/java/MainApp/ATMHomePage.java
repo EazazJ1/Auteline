@@ -50,9 +50,9 @@ public class ATMHomePage extends BankDatabase {
             }
         }
     }
-    // public static void main(String[] args) {
-    // new ATMHomePage();
-
-    // }
+//     public static void main(String[] args) {
+//     new ATMHomePage();
+//
+//     }
 
 }
