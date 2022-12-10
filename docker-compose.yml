@@ -1,5 +1,7 @@
 version: '3'
 services:
-  server:
-    build: .
-   
+  alpine:
+    image: openjdk:17-alpine
+    volumes:
+      - .:/usr/app
+    command: java -jar usr/app/target/auteline-develop-1.0-SNAPSHOT.jar
