@@ -25,9 +25,6 @@ public class Account {
     totalBalance = theTotalBalance;
   }
 
-  public Account() {
-
-  }
 
   // determines whether a user-specified PIN matches PIN in Account
   public boolean validatePIN(int userPIN) {
