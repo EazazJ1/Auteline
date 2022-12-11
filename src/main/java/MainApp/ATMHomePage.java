@@ -43,7 +43,6 @@ public class ATMHomePage extends BankDatabase {
                     String userNumber = userNumberInput.getText();
                     userNumberInput.setText("");
                     pinInput.setText("");
-                    //mainPanel.setVisible(false);
                     frame.dispose();
                     new MainMenuPage(bankDatabase,userNumber);
                 }

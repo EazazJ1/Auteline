@@ -58,26 +58,47 @@ public class GUITest {
         menu.exitButton.doClick();
         ATMHomePage loginPage = new ATMHomePage();
         assertTrue(loginPage.frame.isDisplayable());
+        assertFalse(menu.frame.isDisplayable());
     }
 
-
-    @Test //need to update
+    @Test
     public void T007_Menu_MakeDeposit_1000cents() {
-        ATMHomePage loginPage = new ATMHomePage();
-        DepositPage deposit = new DepositPage(loginPage.bankDatabase, "12345");
+        BankDatabase bankDatabase = new BankDatabase();
+        DepositPage deposit = new DepositPage(bankDatabase, "12345");
         deposit.depositAmountInput.setText("1000");
         deposit.makeDepositButton.doClick();
-        MainMenuPage menu = new MainMenuPage(loginPage.bankDatabase, "12345");
-        assertTrue(menu.totalBalance == 4480.0);
-        //assertTrue(menu.availableBalance ==-8720.0) ;
+        double updatedTotalBalance = bankDatabase.getTotalBalance(Integer.parseInt("12345"));
+        assertTrue(updatedTotalBalance== 4510.0);
     }
-    @Test //need to update
+    @Test
     public void T008_Menu_MakeWithdraw_20Dollar() {
-        ATMHomePage loginPage = new ATMHomePage();
-        WithdrawPage withdrawPage = new WithdrawPage(loginPage.bankDatabase, "12345");
+        BankDatabase bankDatabase = new BankDatabase();
+        WithdrawPage withdrawPage = new WithdrawPage(bankDatabase, "12345");
         withdrawPage.twentyDollarButton.doClick();
-        MainMenuPage menu = new MainMenuPage(loginPage.bankDatabase, "12345");
-        assertTrue(menu.totalBalance == 4500.0);
-        //assertTrue(menu.availableBalance ==-8720.0) ;
+        double updatedTotalBalance = bankDatabase.getTotalBalance(Integer.parseInt("12345"));
+        double updatedAvailableBalance = bankDatabase.getAvailableBalance((Integer.parseInt("12345")));
+        System.out.println(updatedAvailableBalance+ " " +updatedTotalBalance);
+        assertTrue(updatedTotalBalance == 4460.0);
+        assertTrue(updatedAvailableBalance ==-8740.0) ;
     }
+
+    @Test
+    public void T009_Menu_Deposit_BackToMenu() {
+        BankDatabase bankDatabase = new BankDatabase();
+        MainMenuPage menu = new MainMenuPage(bankDatabase, "12345");
+        DepositPage deposit = new DepositPage(bankDatabase, "12345");
+        deposit.backButton.doClick();
+        assertFalse(deposit.frame.isDisplayable());
+        assertTrue(menu.frame.isDisplayable());
+    }
+    @Test
+    public void T010_Menu_Withdraw_BackToMenu() {
+        BankDatabase bankDatabase = new BankDatabase();
+        MainMenuPage menu = new MainMenuPage(bankDatabase, "12345");
+        WithdrawPage withdraw = new WithdrawPage(bankDatabase, "12345");
+        withdraw.backButton.doClick();
+        assertFalse(withdraw.frame.isDisplayable());
+        assertTrue(menu.frame.isDisplayable());
+    }
+
 }

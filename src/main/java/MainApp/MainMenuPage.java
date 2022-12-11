@@ -35,7 +35,7 @@ public class MainMenuPage  {
         @Override
         public void actionPerformed(ActionEvent e) {
             mainMenuPanel.setVisible(false);
-            frame.setVisible(false);
+            frame.dispose();
             new WithdrawPage(bankDatabase,userNumber);
         }
     }
@@ -43,7 +43,7 @@ public class MainMenuPage  {
         @Override
         public void actionPerformed(ActionEvent e) {
             mainMenuPanel.setVisible(false);
-            frame.setVisible(false);
+            frame.dispose();
             new DepositPage(bankDatabase,userNumber);
         }
     }
@@ -59,7 +59,7 @@ public class MainMenuPage  {
         @Override
         public void actionPerformed(ActionEvent e) {
             mainMenuPanel.setVisible(false);
-            frame.setVisible(false);
+            frame.dispose();
             userNumber ="";
             new ATMHomePage();
         }
