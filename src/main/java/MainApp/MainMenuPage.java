@@ -5,15 +5,17 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MainMenuPage  {
-    private JButton viewBalanceButton;
-    private JButton depositButton;
-    private JButton withdrawButton;
-    private JButton exitButton;
+    public JButton viewBalanceButton;
+    public JButton depositButton;
+    public JButton withdrawButton;
+    public JButton exitButton;
     private JLabel mainMenuLable;
     public JPanel mainMenuPanel;
     public JFrame frame;
     private BankDatabase bankDatabase;
     private String userNumber;
+    public double availableBalance;
+    public double totalBalance;
     public MainMenuPage(BankDatabase database, String userNumber) {
         frame = new JFrame("MainMenuPage");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -45,11 +47,11 @@ public class MainMenuPage  {
             new DepositPage(bankDatabase,userNumber);
         }
     }
-    private class viewBalanceButtonClicked implements ActionListener{
+    public class viewBalanceButtonClicked implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
-            double availableBalance =bankDatabase.getAvailableBalance(Integer.parseInt(userNumber));
-            double totalBalance =bankDatabase.getTotalBalance(Integer.parseInt(userNumber));
+            availableBalance =bankDatabase.getAvailableBalance(Integer.parseInt(userNumber));
+            totalBalance =bankDatabase.getTotalBalance(Integer.parseInt(userNumber));
             JOptionPane.showMessageDialog(null, "Available balance: " +availableBalance+"\nTotal Balance: "+totalBalance);
         }
     }
