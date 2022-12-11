@@ -5,16 +5,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ATMHomePage extends BankDatabase {
-    private JButton loginButton;
-    private JPasswordField pinInput;
-    private JTextField userNumberInput;
+    public JButton loginButton;
+    public JPasswordField pinInput;
+    public JTextField userNumberInput;
     private JLabel ATMLabel;
-    private JPanel mainPanel;
+    public JPanel mainPanel;
     private JLabel userNumberLabel;
     private JLabel pinLabel;
-    private BankDatabase bankDatabase = new BankDatabase();
+    public BankDatabase bankDatabase = new BankDatabase();
 
-    private JFrame frame;
+    public JFrame frame;
     public ATMHomePage() {
         frame = new JFrame("ATMHomePage");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

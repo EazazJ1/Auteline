@@ -11,7 +11,7 @@ public class MainMenuPage  {
     private JButton exitButton;
     private JLabel mainMenuLable;
     public JPanel mainMenuPanel;
-    private JFrame frame;
+    public JFrame frame;
     private BankDatabase bankDatabase;
     private String userNumber;
     public MainMenuPage(BankDatabase database, String userNumber) {
