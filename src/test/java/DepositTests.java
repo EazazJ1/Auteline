@@ -1,14 +1,3 @@
-import static org.junit.Assert.*;
-
-import org.junit.*;
-
-
-import MainApp.BankDatabase;
-import MainApp.Screen;
-import MainApp.Deposit;
-import MainApp.Keypad;
-import MainApp.DepositSlot;
-
 
 public class DepositTests {
 
