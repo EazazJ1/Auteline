@@ -12,7 +12,7 @@ public class MainMenuPage  {
     private JLabel mainMenuLable;
     public JPanel mainMenuPanel;
     public JFrame frame;
-    private BankDatabase bankDatabase;
+    public BankDatabase bankDatabase;
     private String userNumber;
     public double availableBalance;
     public double totalBalance;
