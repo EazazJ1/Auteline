@@ -5,13 +5,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class DepositPage extends BankDatabase {
-    private JTextField depositAmountInput;
+    public JTextField depositAmountInput;
     private JLabel depositLabel;
     private JPanel depositPanel;
-    private JButton backButton;
-    private JButton makeDepositButton;
+    public JButton backButton;
+    public JButton makeDepositButton;
     private String userNumber;
-    private JFrame frame;
+    public JFrame frame;
     private BankDatabase bankDatabase;
     public DepositPage(BankDatabase bankDatabase, String userNumber){
         frame = new JFrame("DepositPage");
@@ -43,7 +43,7 @@ public class DepositPage extends BankDatabase {
     private class backButtonClicked implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            frame.setVisible(false);
+            frame.dispose();
             new MainMenuPage(bankDatabase,userNumber);
         }
     }

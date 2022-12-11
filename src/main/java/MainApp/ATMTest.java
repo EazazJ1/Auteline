@@ -15,7 +15,6 @@ public class ATMTest {
    //main method creates and runs the ATM
   public static void main(String[] args) {
 
-
       String mode = args.length != 0 ? args[0] : "1";
       String terminalApp = "1";
       String loadTest = "2";
@@ -31,9 +30,10 @@ public class ATMTest {
       }
 //      if(mode.equals(guiApp)){
 //          ATMHomePage gui = new ATMHomePage();
-      }
+//      }
     
 
   }
+
 
 }

@@ -7,13 +7,13 @@ import java.awt.event.ActionListener;
 public class WithdrawPage {
     private JButton twoHundredDollarButton;
     private JPanel withdrawPanel;
-    private JButton twentyDollarButton;
+    public JButton twentyDollarButton;
     private JButton sixtyDollarButton;
     private JButton fourtyDollarButton;
     private JLabel withdrawLabel;
     private JButton oneHundredDollarButton;
-    private JButton backButton;
-    private JFrame frame;
+    public JButton backButton;
+    public JFrame frame;
     private String userNumber;
     private BankDatabase bankDatabase;
     public WithdrawPage(BankDatabase bankDatabasePassed, String userNumber){
@@ -53,7 +53,7 @@ public class WithdrawPage {
     private class backButtonClicked implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
-            frame.setVisible(false);
+            frame.dispose();
             new MainMenuPage(bankDatabase,userNumber);
         }
     }
