@@ -1,7 +1,7 @@
 import org.junit.Test;
-import main.java.Account;
-import main.java.BankDatabase;
-import main.java.CashDispenser;
+import MainApp.Account;
+import MainApp.BankDatabase;
+import MainApp.CashDispenser;
 
 //import.main.*;
 

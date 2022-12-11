@@ -1,6 +1,6 @@
 import static org.junit.Assert.*;
 import org.junit.*;
-import main.java.BankDatabase;
+import MainApp.BankDatabase;
 
 public class BankDatabaseTests {
 

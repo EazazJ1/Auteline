@@ -1,5 +1,5 @@
-import main.java.Account;
-import main.java.BankDatabase;
+import MainApp.Account;
+import MainApp.BankDatabase;
 //import.main.*;
 
 import static org.junit.Assert.*;

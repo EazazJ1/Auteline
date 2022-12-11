@@ -3,11 +3,11 @@ import static org.junit.Assert.*;
 import org.junit.*;
 
 
-import main.java.BankDatabase;
-import main.java.Screen;
-import main.java.Deposit;
-import main.java.Keypad;
-import main.java.DepositSlot;
+import MainApp.BankDatabase;
+import MainApp.Screen;
+import MainApp.Deposit;
+import MainApp.Keypad;
+import MainApp.DepositSlot;
 
 
 public class DepositTests {
