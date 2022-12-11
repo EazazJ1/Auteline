@@ -1,7 +1,52 @@
 version: '3'
 services:
-  alpine:
+  client1:
     image: openjdk:17-alpine
     volumes:
       - .:/usr/app
-    command: java -jar usr/app/target/auteline-develop-1.0-SNAPSHOT.jar
+    command: java -jar usr/app/target/auteline-develop-1.0-SNAPSHOT.jar 2 12346
+  client2:
+    image: openjdk:17-alpine
+    volumes:
+      - .:/usr/app
+    command: java -jar usr/app/target/auteline-develop-1.0-SNAPSHOT.jar 2 12347
+  client3:
+    image: openjdk:17-alpine
+    volumes:
+      - .:/usr/app
+    command: java -jar usr/app/target/auteline-develop-1.0-SNAPSHOT.jar 2 12348
+  client4:
+    image: openjdk:17-alpine
+    volumes:
+      - .:/usr/app
+    command: java -jar usr/app/target/auteline-develop-1.0-SNAPSHOT.jar 2 12349
+  client5:
+    image: openjdk:17-alpine
+    volumes:
+      - .:/usr/app
+    command: java -jar usr/app/target/auteline-develop-1.0-SNAPSHOT.jar 2 22345
+  client6:
+    image: openjdk:17-alpine
+    volumes:
+      - .:/usr/app
+    command: java -jar usr/app/target/auteline-develop-1.0-SNAPSHOT.jar 2 32345
+  client7:
+    image: openjdk:17-alpine
+    volumes:
+      - .:/usr/app
+    command: java -jar usr/app/target/auteline-develop-1.0-SNAPSHOT.jar 2 42345
+  client8:
+    image: openjdk:17-alpine
+    volumes:
+      - .:/usr/app
+    command: java -jar usr/app/target/auteline-develop-1.0-SNAPSHOT.jar 2 62345
+  client9:
+    image: openjdk:17-alpine
+    volumes:
+      - .:/usr/app
+    command: java -jar usr/app/target/auteline-develop-1.0-SNAPSHOT.jar 2 72345
+  client10:
+    image: openjdk:17-alpine
+    volumes:
+      - .:/usr/app
+    command: java -jar usr/app/target/auteline-develop-1.0-SNAPSHOT.jar 2 82345

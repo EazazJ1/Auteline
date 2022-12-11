@@ -128,4 +128,35 @@ public class BankDatabase {
     getAccount(userAccountNumber).debit(amount);
   }
 
+  public void loadTest(int accNum) {
+
+    //int accNum = 12345;
+    int correctPin = 54321;
+    int incorrectPin = 55555;
+
+    double withdrawAmount = 100.00;
+    double depositAmount = 350;
+
+    boolean loggedIn = authenticateUser(accNum, incorrectPin);
+    System.out.println("Logged in = " + loggedIn);
+
+    loggedIn = authenticateUser(accNum, correctPin);
+    System.out.println("Logged in = " + loggedIn);
+
+    double totalBalance = getTotalBalance(accNum);
+    System.out.println("Total Balance: " + totalBalance);
+
+    double avaiableBalance = getAvailableBalance(accNum);
+    System.out.println("Available Balance: " + avaiableBalance);
+
+    if(loggedIn){
+      credit(accNum, depositAmount);
+      System.out.println("Deposited $" + depositAmount + " into account number: " + accNum);
+      debit(accNum, withdrawAmount);
+      System.out.println("Withdrew $" + withdrawAmount + " from account number: " + accNum);
+    }
+
+
+  }
+
 }
